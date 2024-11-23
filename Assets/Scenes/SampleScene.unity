@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &30160698 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6113062469055653222, guid: acbf1b9b28de76d46b1d96ae18f62692,
+    type: 3}
+  m_PrefabInstance: {fileID: 6113062469026550366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &35273307
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +254,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 30160698}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
