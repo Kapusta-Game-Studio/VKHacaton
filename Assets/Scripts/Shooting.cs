@@ -25,7 +25,7 @@ namespace Interaction
         private void Shoot(Shell shell = null)
         {
             Shell sh = !shell ? Instantiate(_shellPrefab, _shellSpawnPos).GetComponent<Shell>() : shell;
-            sh.GetRb().AddExplosionForce(_shootingPower, _explosionPosition.position, _explosionRadius);
+            sh.GetRb().AddExplosionForce(_shootingPower*1000, _explosionPosition.position, _explosionRadius);
         }
 
         private IEnumerator WaitAndShoot(float time)

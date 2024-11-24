@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005203538025773942}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1179, z: -0.565}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.258819, y: -0, z: -0, w: 0.9659259}
+  m_LocalPosition: {x: 0, y: -0.0010315478, z: -0.008605552}
+  m_LocalScale: {x: 0.1, y: 0.04444444, z: 0.02105263}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6113062469055653222}
-  m_RootOrder: 3
+  m_Father: {fileID: 6007604609883495194}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3853007171026965910
 GameObject:
@@ -191,7 +191,6 @@ Transform:
   - {fileID: 6113062468683455902}
   - {fileID: 6007604609883495194}
   - {fileID: 1735032117997090431}
-  - {fileID: 520362614733223981}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -210,7 +209,7 @@ MonoBehaviour:
   _shellSpawnPos: {fileID: 1735032117997090431}
   _shellPrefab: {fileID: 5532582058963299489, guid: 5dd09b4f85b5801468d08194daa769b1,
     type: 3}
-  _shootingPower: 22000
+  _shootingPower: 22
   _explosionRadius: 1
   _explosionPosition: {fileID: 520362614733223981}
 --- !u!1 &6346869559498801568
@@ -243,7 +242,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.385, z: -0.123000145}
   m_LocalScale: {x: 10, y: 10, z: 60}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 520362614733223981}
   m_Father: {fileID: 6113062469055653222}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -30, y: 0, z: 0}
