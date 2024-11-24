@@ -17,12 +17,7 @@ namespace Interaction
         [SerializeField] private float _explosionRadius;
         [SerializeField] private Transform _explosionPosition;
 
-        private void Start()
-        {
-            StartCoroutine(WaitAndShoot(2));
-        }
-
-        private void Shoot(Shell shell = null)
+        internal void Shoot(Shell shell = null)
         {
             Shell sh = !shell ? Instantiate(_shellPrefab, _shellSpawnPos).GetComponent<Shell>() : shell;
             sh.GetRb().AddExplosionForce(_shootingPower*1000, _explosionPosition.position, _explosionRadius);
