@@ -7,12 +7,19 @@ namespace Interaction
     internal enum TypeOfShell
     {
         Common = 0,
+        Explosive = 1,
+    }
+
+    [System.Serializable]
+    internal struct GunAvalibleShell
+    {
+        [SerializeField] internal List<GameObject> sourcePrefabs;
+        [SerializeField] internal List<TypeOfShell> types;
     }
 
     public class Shell : MonoBehaviour
     {
-        [SerializeField] private Rigidbody _rb;
-
+        [SerializeField] protected Rigidbody _rb;
 
         private void Awake()
         {

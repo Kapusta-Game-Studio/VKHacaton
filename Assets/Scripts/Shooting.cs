@@ -23,6 +23,8 @@ namespace Interaction
             sh.GetRb().AddExplosionForce(_shootingPower*1000, _explosionPosition.position, _explosionRadius);
         }
 
+        internal void ChangeShell(GameObject shell) => _shellPrefab = shell;
+
         private IEnumerator WaitAndShoot(float time)
         {
             yield return new WaitForSeconds(time);

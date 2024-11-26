@@ -11,45 +11,80 @@ namespace Controllers
         [SerializeField] private List<GameObject> _guns;
         [SerializeField] private Transform _gunPos;
 
+        [Header("Shells Setup")]
+
+        [SerializeField] private List<Interaction.GunAvalibleShell> _shells;
+        [SerializeField] private Transform _shellPos;
+
         [Header("UI Setup")]
 
         [SerializeField] private GameObject _GunChoosePanel;
+        [SerializeField] private GameObject _ShellChoosePanel;
         [SerializeField] private GameObject _ShootPanel;
 
         [Header("Other")]
 
         [SerializeField] private GunController _gunController;
 
-        private int _curPos;
-        private GameObject _curGun;
+        private int _curGunPos;
+        private int _curShellPos;
+        private GameObject _curObj;
 
         private void Start()
         {
-            _curPos = 0;
-            CreateGun(_curPos);
+            _curGunPos = 0;
+            _curShellPos = 0;
+            CreateGun(_curGunPos);
         }
 
         public void ChangeGun(int posPlus = 1)
         {
-            Destroy(_curGun);
-            _curPos += posPlus;
+            Destroy(_curObj);
+            _curGunPos += posPlus;
 
-            if (_curPos < 0)
-                _curPos = _guns.Count-1;
-            else if (_curPos > _guns.Count-1)
-                _curPos = 0;
+            if (_curGunPos < 0)
+                _curGunPos = _guns.Count-1;
+            else if (_curGunPos > _guns.Count-1)
+                _curGunPos = 0;
 
-            CreateGun(_curPos);
+            CreateGun(_curGunPos);
+        }
+
+        public void ChangeShell(int posPlus = 1)
+        {
+            Destroy(_curObj);
+            _curShellPos += posPlus;
+
+            if (_curShellPos < 0)
+                _curShellPos = _shells[_curGunPos].sourcePrefabs.Count - 1;
+            else if (_curShellPos > _shells[_curGunPos].sourcePrefabs.Count - 1)
+                _curShellPos = 0;
+
+            CreateShell(_curShellPos);
         }
 
         public void ConfirmGun()
-        {
+        { 
             _GunChoosePanel.SetActive(false);
-            _ShootPanel.SetActive(true);
-            _gunController.gun = _curGun.GetComponent<Interaction.Shooting>();
+            _ShellChoosePanel.SetActive(true);
+            _gunController.gun = _curObj.GetComponent<Interaction.Shooting>();
+            CreateShell(_curGunPos);
         }
 
-        private void CreateGun(int index) => _curGun =  Instantiate(_guns[index], _gunPos);
+        public void ConfirmShell()
+        {
+            _ShellChoosePanel.SetActive(false);
+            _ShootPanel.SetActive(true);
+            _gunController.gun.ChangeShell(_shells[_curGunPos].sourcePrefabs[_curShellPos]);
+            Destroy(_curObj);
+        }
+
+        private void CreateGun(int index) => _curObj =  Instantiate(_guns[index], _gunPos);
+        private void CreateShell(int index)
+        {
+            _curObj = Instantiate(_shells[_curGunPos].sourcePrefabs[index], _shellPos);
+            _curObj.GetComponent<Interaction.Shell>().GetRb().isKinematic = true;
+        }
     }
 }
 
