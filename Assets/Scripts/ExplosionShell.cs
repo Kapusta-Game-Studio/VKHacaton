@@ -20,9 +20,15 @@ namespace Interaction
             foreach (Collider hit in colliders)
             {
                 Rigidbody rb = hit.GetComponent<Rigidbody>();
-
                 if (rb != null)
-                    rb.AddExplosionForce(_explosionPower*1000, explosionPos, _explosionRadius, _explosionShakeWave);
+                {
+                    Environment.Brick brick = rb.GetComponent<Environment.Brick>();
+                    if (brick)
+                        brick.ChangeKinematic(false);
+
+                    rb.AddExplosionForce(_explosionPower * 1000, explosionPos, _explosionRadius, _explosionShakeWave);
+                }
+                    
             }
             Destroy(this.gameObject);
         }

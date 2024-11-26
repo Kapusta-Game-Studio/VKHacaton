@@ -68,7 +68,7 @@ namespace Controllers
             _GunChoosePanel.SetActive(false);
             _ShellChoosePanel.SetActive(true);
             _gunController.gun = _curObj.GetComponent<Interaction.Shooting>();
-            CreateShell(_curGunPos);
+            CreateShell(_curShellPos);
         }
 
         public void ConfirmShell()
