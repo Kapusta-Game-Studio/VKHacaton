@@ -132,3 +132,4 @@ MonoBehaviour:
   _explosionPower: 20
   _explosionRadius: 1
   _explosionShakeWave: 0.5
+  _explosionSound: SmallExplosion

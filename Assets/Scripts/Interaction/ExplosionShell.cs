@@ -9,6 +9,7 @@ namespace Interaction
         [SerializeField] private float _explosionPower = 20;
         [SerializeField] private float _explosionRadius = 1f;
         [SerializeField] private float _explosionShakeWave = 3.0f;
+        [SerializeField] private string _explosionSound = "SmallExplosion";
 
         private void OnCollisionEnter(Collision collision)
         {
@@ -30,6 +31,7 @@ namespace Interaction
                 }
                     
             }
+            Audio.AudioManager.Instance.PlaySound(_explosionSound, this.transform.position, voluminous: true);
             Destroy(this.gameObject);
         }
     }

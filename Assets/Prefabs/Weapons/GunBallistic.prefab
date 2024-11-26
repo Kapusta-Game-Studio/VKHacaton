@@ -212,6 +212,7 @@ MonoBehaviour:
   _shootingPower: 22
   _explosionRadius: 1
   _explosionPosition: {fileID: 520362614733223981}
+  _shotingSound: GunShot
 --- !u!1 &6346869559498801568
 GameObject:
   m_ObjectHideFlags: 0

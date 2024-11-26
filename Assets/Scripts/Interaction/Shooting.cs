@@ -17,8 +17,12 @@ namespace Interaction
         [SerializeField] private float _explosionRadius;
         [SerializeField] private Transform _explosionPosition;
 
+        [SerializeField] private string _shotingSound;
+
         internal void Shoot(Shell shell = null)
         {
+            if (_shotingSound != string.Empty)
+                Audio.AudioManager.Instance.PlaySound(_shotingSound, this.transform.position, voluminous: true);
             Shell sh = !shell ? Instantiate(_shellPrefab, _shellSpawnPos).GetComponent<Shell>() : shell;
             sh.GetRb().AddExplosionForce(_shootingPower*1000, _explosionPosition.position, _explosionRadius);
         }
