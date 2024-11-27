@@ -68,6 +68,7 @@ namespace Controllers
             _GunChoosePanel.SetActive(false);
             _ShellChoosePanel.SetActive(true);
             _gunController.gun = _curObj.GetComponent<Interaction.Shooting>();
+            
             CreateShell(_curShellPos);
         }
 
@@ -76,6 +77,7 @@ namespace Controllers
             _ShellChoosePanel.SetActive(false);
             _ShootPanel.SetActive(true);
             _gunController.gun.ChangeShell(_shells[_curGunPos].sourcePrefabs[_curShellPos]);
+            _gunController.barrel = _gunController.gun.barrel;
             Destroy(_curObj);
         }
 

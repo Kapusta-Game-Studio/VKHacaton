@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: ExplosionPosition
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -31,6 +31,40 @@ Transform:
   m_Father: {fileID: 6631510834076613219}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3558086981127468335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4221446734496407246}
+  m_Layer: 0
+  m_Name: BarrelRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4221446734496407246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3558086981127468335}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6597037376193101031}
+  - {fileID: 1678863971329545990}
+  - {fileID: 6631510834076613219}
+  m_Father: {fileID: 6597037376621839391}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4188408111096722671
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +77,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPosition
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -55,12 +89,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4188408111096722671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3534, z: -0.45}
+  m_LocalPosition: {x: 0, y: -0.046600014, z: -0.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6597037376621839391}
-  m_RootOrder: 2
+  m_Father: {fileID: 4221446734496407246}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6290415267146768601
 GameObject:
@@ -89,13 +123,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6290415267146768601}
   m_LocalRotation: {x: -0.049900346, y: -0, z: -0, w: 0.9987542}
-  m_LocalPosition: {x: 0, y: 0.385, z: -0.123000145}
+  m_LocalPosition: {x: 0, y: -0.0150000155, z: -0.123000145}
   m_LocalScale: {x: 10, y: 10, z: 60}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 603522401774442836}
-  m_Father: {fileID: 6597037376621839391}
-  m_RootOrder: 1
+  m_Father: {fileID: 4221446734496407246}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -5.721, y: 0, z: 0}
 --- !u!33 &7757450781791712710
 MeshFilter:
@@ -188,11 +222,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6597037376193100952}
   m_LocalRotation: {x: -0.0044403076, y: -0, z: -0, w: 0.99999017}
-  m_LocalPosition: {x: 0, y: 0.1614, z: 0.37583065}
-  m_LocalScale: {x: 0.10000001, y: 0.3854758, z: 0.099999994}
+  m_LocalPosition: {x: 0, y: -0.2386, z: 0.37583065}
+  m_LocalScale: {x: 0.10000001, y: 0.38547587, z: 0.099999994}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6597037376621839391}
+  m_Father: {fileID: 4221446734496407246}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.509, y: 0, z: 0}
 --- !u!33 &6597037376193101028
@@ -287,9 +321,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6597037376193101031}
-  - {fileID: 6631510834076613219}
-  - {fileID: 1678863971329545990}
+  - {fileID: 4221446734496407246}
   - {fileID: 6597037378219850324}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -309,6 +341,7 @@ MonoBehaviour:
   _shellSpawnPos: {fileID: 1678863971329545990}
   _shellPrefab: {fileID: 5532582058963299489, guid: 5dd09b4f85b5801468d08194daa769b1,
     type: 3}
+  barrel: {fileID: 3558086981127468335}
   _shootingPower: 60
   _explosionRadius: 1
   _explosionPosition: {fileID: 603522401774442836}
@@ -345,7 +378,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6597037376621839391}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -0.509, y: 0, z: 0}
 --- !u!33 &6597037378219850321
 MeshFilter:
