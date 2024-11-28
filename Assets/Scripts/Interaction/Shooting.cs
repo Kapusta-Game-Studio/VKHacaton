@@ -15,8 +15,6 @@ namespace Interaction
         [Header("Shooting options")]
 
         [SerializeField] private float _shootingPower;
-        [SerializeField] private float _explosionRadius;
-        [SerializeField] private Transform _explosionPosition;
 
         [SerializeField] private string _shotingSound;
 
@@ -26,7 +24,7 @@ namespace Interaction
                 Audio.AudioManager.Instance.PlaySound(_shotingSound, this.transform.position, voluminous: true);
             Shell sh = !shell ? Instantiate(_shellPrefab, _shellSpawnPos).GetComponent<Shell>() : shell;
             sh.transform.parent = null;
-            sh.GetRb().AddExplosionForce(_shootingPower*1000, _explosionPosition.position, _explosionRadius);
+            sh.GetRb().AddForce(_shellSpawnPos.forward * _shootingPower * 20, ForceMode.Impulse);
         }
 
         internal void ChangeShell(GameObject shell) => _shellPrefab = shell;
