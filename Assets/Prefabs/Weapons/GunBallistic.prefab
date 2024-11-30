@@ -209,7 +209,7 @@ MonoBehaviour:
   _shellSpawnPos: {fileID: 1735032117997090431}
   _shellPrefab: {fileID: 5532582058963299489, guid: e3dbc22fd8766bf438059a1435ec4327,
     type: 3}
-  _shootingPower: 22
+  _shootingPower: 33
   _explosionRadius: 1
   _explosionPosition: {fileID: 520362614733223981}
   _shotingSound: GunShot
