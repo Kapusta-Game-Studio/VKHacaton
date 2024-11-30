@@ -16,37 +16,20 @@ namespace Controllers
         private float _rotationY = 0;
         private float _rotationX = 0;
 
+        private void Start()
+        {
+            Input.gyro.enabled = true;
+        }
+
         private void Update()
         {
             if (!barrel)
                 return;
 
-            if (Input.GetKey(KeyCode.Q))
-            {
-                _rotationY -=  _rotAngle;
-                _rotationY = Mathf.Clamp(_rotationY, -_maxXRot, _maxXRot);
-                barrel.transform.localEulerAngles = new Vector3(barrel.transform.localEulerAngles.x, _rotationY, barrel.transform.localEulerAngles.z);
-            }
-
-            else if (Input.GetKey(KeyCode.E))
-            {
-                _rotationY += _rotAngle;
-                _rotationY = Mathf.Clamp(_rotationY, -_maxXRot, _maxXRot);
-                barrel.transform.localEulerAngles = new Vector3(barrel.transform.localEulerAngles.x, _rotationY, barrel.transform.localEulerAngles.z);
-            }
-
-            else if (Input.GetKey(KeyCode.G))
-            {
-                _rotationX += _rotAngle;
-                _rotationX = Mathf.Clamp(_rotationX, -_maxYRot, _maxYRot);
-                barrel.transform.localEulerAngles = new Vector3(_rotationX, barrel.transform.localEulerAngles.y, barrel.transform.localEulerAngles.z);
-            }
-            else if (Input.GetKey(KeyCode.T))
-            {
-                _rotationX -= _rotAngle;
-                _rotationX = Mathf.Clamp(_rotationX, -_maxYRot, _maxYRot);
-                barrel.transform.localEulerAngles = new Vector3(_rotationX, barrel.transform.localEulerAngles.y, barrel.transform.localEulerAngles.z);
-            }
+            Quaternion gyroRot = GyroToUnity(Input.gyro.attitude);
+            Vector3 oldRot = barrel.transform.localEulerAngles;
+            barrel.transform.localRotation = gyroRot;
+            barrel.transform.localEulerAngles = new Vector3(Mathf.Clamp(barrel.transform.localEulerAngles.y, -_maxYRot, _maxYRot), Mathf.Clamp(barrel.transform.localEulerAngles.y, -_maxXRot, _maxXRot), oldRot.z);
         }
 
         public void TryToShoot()
@@ -56,6 +39,11 @@ namespace Controllers
             if (!gun)
                 throw new System.Exception("No gun chosen!");
             gun.Shoot();
+        }
+        
+        private static Quaternion GyroToUnity(Quaternion q)
+        {
+            return new Quaternion(q.x, q.y, -q.z, -q.w);
         }
     }
 }
