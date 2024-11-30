@@ -35,13 +35,13 @@ namespace Controllers
                 barrel.transform.localEulerAngles = new Vector3(barrel.transform.localEulerAngles.x, _rotationY, barrel.transform.localEulerAngles.z);
             }
 
-            else if (Input.GetKey(KeyCode.T))
+            else if (Input.GetKey(KeyCode.G))
             {
                 _rotationX += _rotAngle;
                 _rotationX = Mathf.Clamp(_rotationX, -_maxYRot, _maxYRot);
                 barrel.transform.localEulerAngles = new Vector3(_rotationX, barrel.transform.localEulerAngles.y, barrel.transform.localEulerAngles.z);
             }
-            else if (Input.GetKey(KeyCode.G))
+            else if (Input.GetKey(KeyCode.T))
             {
                 _rotationX -= _rotAngle;
                 _rotationX = Mathf.Clamp(_rotationX, -_maxYRot, _maxYRot);

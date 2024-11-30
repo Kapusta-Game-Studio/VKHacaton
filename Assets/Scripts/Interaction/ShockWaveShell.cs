@@ -4,12 +4,11 @@ using UnityEngine;
 
 namespace Interaction
 {
-    public class ExplosionShell : Shell
+    public class ShockWaveShell : Shell
     {
-        [SerializeField] private float _explosionPower = 20;
-        [SerializeField] private float _explosionRadius = 1f;
-        [SerializeField] private float _explosionShakeWave = 3.0f;
-        [SerializeField] private string _explosionSound = "SmallExplosion";
+        [SerializeField] private float _shockWavePower = 20;
+        [SerializeField] private float _shockWaveRadius = 1f;
+        [SerializeField] private float _shockWaveShakeWave = 3.0f;
 
         private void OnCollisionEnter(Collision collision)
         {
@@ -17,7 +16,7 @@ namespace Interaction
                 return;
 
             Vector3 explosionPos = transform.position;
-            Collider[] colliders = Physics.OverlapSphere(explosionPos, _explosionRadius);
+            Collider[] colliders = Physics.OverlapSphere(explosionPos, _shockWaveRadius);
             foreach (Collider hit in colliders)
             {
                 Rigidbody rb = hit.GetComponent<Rigidbody>();
@@ -27,11 +26,9 @@ namespace Interaction
                     if (brick)
                         brick.ChangeKinematic(false);
 
-                    rb.AddExplosionForce(_explosionPower * 1000, explosionPos, _explosionRadius, _explosionShakeWave);
+                    rb.AddExplosionForce(_shockWavePower * 100, explosionPos, _shockWaveRadius, _shockWaveShakeWave);
                 }
             }
-            Audio.AudioManager.Instance.PlaySound(_explosionSound, this.transform.position, voluminous: true);
-            Destroy(this.gameObject);
         }
     }
 }

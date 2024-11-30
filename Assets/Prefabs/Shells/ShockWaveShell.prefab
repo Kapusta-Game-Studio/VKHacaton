@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5532582058963299494}
   - component: {fileID: 3579517336536334978}
   - component: {fileID: 5532582058963299488}
-  - component: {fileID: 4684853577345263555}
+  - component: {fileID: 8765920047802043208}
   m_Layer: 0
-  m_Name: Shell
+  m_Name: ShockWaveShell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d24bc40999a2e4044986fd6c82fc756b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116,7 +116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4684853577345263555
+--- !u!114 &8765920047802043208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,6 +129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 5532582058963299488}
-  _shockWavePower: 10
-  _shockWaveRadius: 0.5
-  _shockWaveShakeWave: 1
+  _shockWavePower: 15
+  _shockWaveRadius: 1
+  _shockWaveShakeWave: 15

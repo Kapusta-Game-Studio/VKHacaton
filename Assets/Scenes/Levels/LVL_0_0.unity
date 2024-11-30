@@ -5617,11 +5617,13 @@ MonoBehaviour:
   - sourcePrefabs:
     - {fileID: 5532582058963299489, guid: 5dd09b4f85b5801468d08194daa769b1, type: 3}
     - {fileID: 5532582058963299489, guid: e3dbc22fd8766bf438059a1435ec4327, type: 3}
-    types: 0000000001000000
+    - {fileID: 5532582058963299489, guid: 3e9aaee712f498942b73ed880052b49b, type: 3}
+    types: 000000000100000000000000
   - sourcePrefabs:
     - {fileID: 5532582058963299489, guid: 5dd09b4f85b5801468d08194daa769b1, type: 3}
     - {fileID: 5532582058963299489, guid: e3dbc22fd8766bf438059a1435ec4327, type: 3}
-    types: 0000000001000000
+    - {fileID: 5532582058963299489, guid: 3e9aaee712f498942b73ed880052b49b, type: 3}
+    types: 000000000100000000000000
   _shellPos: {fileID: 1985483386}
   _GunChoosePanel: {fileID: 207496829}
   _ShellChoosePanel: {fileID: 531890102}
