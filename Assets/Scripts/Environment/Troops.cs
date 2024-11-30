@@ -20,6 +20,17 @@ namespace Environment
             GameObject.FindObjectOfType<Controllers.ProgressController>().TargetDestroyed();
             Destroy(this);
         }
+
+        internal new void ChangeKinematic(bool state)
+        {
+            if (_onceActivated)
+                return;
+            _onceActivated = true;
+
+            GameObject.FindObjectOfType<Controllers.ProgressController>().TargetDestroyed();
+            _rb.isKinematic = state;
+            Destroy(this);
+        }
     }
 }
 
