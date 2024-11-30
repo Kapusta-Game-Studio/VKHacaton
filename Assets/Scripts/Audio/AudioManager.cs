@@ -23,6 +23,7 @@ namespace Audio
         {
             effects = InitializeAudio("Audio/Effects/");
             musics = InitializeAudio("Audio/Music/");
+            DontDestroyOnLoad(this.gameObject);
         }
 
         private void OnEnable()
