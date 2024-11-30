@@ -9,19 +9,20 @@ namespace Environment
     {
         public bool shouldBeKinematicAtStart;
 
-        private Rigidbody _rb;
+        protected Rigidbody _rb;
 
-        private void Start()
+        protected void Start()
         {
             _rb = GetComponent<Rigidbody>();
             if (shouldBeKinematicAtStart)
                 _rb.isKinematic = true;
         }
 
-        private void OnCollisionEnter(Collision collision)
+        protected void OnCollisionEnter(Collision collision)
         {
-            if (!collision.gameObject.CompareTag("Brick"))
-                _rb.isKinematic = false;
+            if (collision.gameObject.CompareTag("Brick"))
+                return;
+            _rb.isKinematic = false;
         }
         
         internal void ChangeKinematic(bool state) => _rb.isKinematic = state;

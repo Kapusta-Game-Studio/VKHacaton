@@ -15,7 +15,6 @@ namespace Interaction
         [Header("Shooting options")]
 
         [SerializeField] private float _shootingPower;
-
         [SerializeField] private string _shotingSound;
 
         internal void Shoot(Shell shell = null)
