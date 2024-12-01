@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91854196ebef81845bc9fabd24785d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rb: {fileID: 6922443581668592523, guid: 6338027db09b0aa4f8838b9c53462f5f, type: 3}
+  _rb: {fileID: 20503931841659929}
   _explosionPower: 20
   _explosionRadius: 1
   _explosionShakeWave: 3
