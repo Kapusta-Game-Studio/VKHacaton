@@ -101,7 +101,7 @@ MonoBehaviour:
   _shellPrefab: {fileID: 3416849672927740880, guid: a1ba942348fe816468ecff9011defa7e,
     type: 3}
   barrel: {fileID: 1130403444661330396}
-  _shootingPower: 60
+  _shootingPower: 100
   _shotingSound: 
 --- !u!1 &9206859987762604088
 GameObject:

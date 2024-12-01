@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 6709403070978206122}
-  _explosionPower: 20
-  _explosionRadius: 1
+  _explosionPower: 200
+  _explosionRadius: 15
   _explosionShakeWave: 3
   _explosionSound: SmallExplosion
