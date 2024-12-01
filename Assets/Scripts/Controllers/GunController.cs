@@ -27,7 +27,7 @@ namespace Controllers
                 return;
 
             Quaternion gyroPos = GyroToUnity(Input.gyro.attitude);
-            barrel.transform.localRotation = new Quaternion(gyroPos.x, gyroPos.y, barrel.transform.localRotation.z, barrel.transform.localRotation.w);
+            //barrel.transform.localRotation = new Quaternion(gyroPos.x, gyroPos.y, barrel.transform.localRotation.z, barrel.transform.localRotation.w);
         }
 
         public void TryToShoot()

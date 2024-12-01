@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 83407953272553283}
   - component: {fileID: 3929259292708810982}
   - component: {fileID: 1252985634925003820}
+  - component: {fileID: -5631163247715247458}
   m_Layer: 0
   m_Name: ancient_ballist 1
   m_TagString: Untagged
@@ -26,10 +27,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748586806163858937}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 0.0028540152, y: 0.0028540152, z: 0.0028540152}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1936751837820605459}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -83,3 +85,52 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-5631163247715247458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748586806163858937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9c76899bcf20946935d7090b80defa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shellSpawnPos: {fileID: 1936751837820605459}
+  _shellPrefab: {fileID: 8715972629608411210, guid: b26b790301034a847b0e16ab3f4cc802,
+    type: 3}
+  barrel: {fileID: 748586806163858937}
+  _shootingPower: 60
+  _shotingSound: 
+--- !u!1 &4657282701379066941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936751837820605459}
+  m_Layer: 0
+  m_Name: SpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1936751837820605459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4657282701379066941}
+  m_LocalRotation: {x: -0.8191521, y: 0, z: 0, w: 0.57357645}
+  m_LocalPosition: {x: 9, y: 124, z: -595}
+  m_LocalScale: {x: 350.38358, y: 350.38348, z: 350.38348}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 83407953272553283}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -110, y: 0, z: 0}

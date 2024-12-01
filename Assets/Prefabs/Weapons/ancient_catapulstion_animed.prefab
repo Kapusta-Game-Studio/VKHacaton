@@ -175,6 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9149159283408548577}
+  - component: {fileID: -9046451045910753222}
   m_Layer: 0
   m_Name: ancient_catapulstion_animed
   m_TagString: Untagged
@@ -199,3 +200,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-9046451045910753222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8481271267712362587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9c76899bcf20946935d7090b80defa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shellSpawnPos: {fileID: 0}
+  _shellPrefab: {fileID: 0}
+  barrel: {fileID: 0}
+  _shootingPower: 0
+  _shotingSound: 

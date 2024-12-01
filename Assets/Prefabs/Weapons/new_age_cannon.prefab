@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 352458747342945126}
   - component: {fileID: 3696317060215076035}
   - component: {fileID: 1490413857175568393}
+  - component: {fileID: -2211865711658434506}
   m_Layer: 0
   m_Name: new_age_cannon
   m_TagString: Untagged
@@ -83,3 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-2211865711658434506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130403444661330396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9c76899bcf20946935d7090b80defa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shellSpawnPos: {fileID: 0}
+  _shellPrefab: {fileID: 0}
+  barrel: {fileID: 0}
+  _shootingPower: 0
+  _shotingSound: 

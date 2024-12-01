@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63029888}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -7.4700003}
+  m_LocalPosition: {x: 0, y: 0, z: -7.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -648,7 +648,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 100
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -674,7 +674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -9.22}
+  m_LocalPosition: {x: 0, y: 5.2, z: -16.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1866,7 +1866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714490511}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: -1.21, z: 4.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2088,14 +2088,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guns:
-  - {fileID: 6597037376621839376, guid: 0d9a22148f1e4a947a2bdaca7f1ab307, type: 3}
+  - {fileID: 5572898548343603269, guid: 40c7858cd251e4b4f88394640996962d, type: 3}
   - {fileID: 6113062469055653225, guid: acbf1b9b28de76d46b1d96ae18f62692, type: 3}
   _gunPos: {fileID: 63029889}
   _shells:
   - sourcePrefabs:
-    - {fileID: 5532582058963299489, guid: 5dd09b4f85b5801468d08194daa769b1, type: 3}
-    - {fileID: 5532582058963299489, guid: e3dbc22fd8766bf438059a1435ec4327, type: 3}
-    - {fileID: 5532582058963299489, guid: 3e9aaee712f498942b73ed880052b49b, type: 3}
+    - {fileID: 8715972629608411210, guid: b26b790301034a847b0e16ab3f4cc802, type: 3}
+    - {fileID: 468661458384743378, guid: 6338027db09b0aa4f8838b9c53462f5f, type: 3}
+    - {fileID: 1202821389064284274, guid: e05a52e1d74d57240ad855d321e60460, type: 3}
     types: 000000000100000000000000
   - sourcePrefabs:
     - {fileID: 5532582058963299489, guid: 5dd09b4f85b5801468d08194daa769b1, type: 3}
