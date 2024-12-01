@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5532582058963299489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 5532582058963299488}
-  _explosionPower: 20
-  _explosionRadius: 1
+  _explosionPower: 50
+  _explosionRadius: 2
   _explosionShakeWave: 0.5
   _explosionSound: SmallExplosion
