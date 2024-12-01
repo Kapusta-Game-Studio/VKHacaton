@@ -85,6 +85,7 @@ namespace Controllers
         private void CreateShell(int index)
         {
             _curObj = Instantiate(_shells[_curGunPos].sourcePrefabs[index], _shellPos);
+            _curObj.transform.rotation = new Quaternion();
             _curObj.GetComponent<Interaction.Shell>().GetRb().isKinematic = true;
         }
     }
