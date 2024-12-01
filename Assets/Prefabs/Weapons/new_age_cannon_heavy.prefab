@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1046079983419432129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4923655064180211356}
+  m_Layer: 0
+  m_Name: SpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4923655064180211356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046079983419432129}
+  m_LocalRotation: {x: -0.4105598, y: 0, z: 0, w: 0.9118337}
+  m_LocalPosition: {x: 0.009, y: 8.17, z: 6.1}
+  m_LocalScale: {x: 0.5925261, y: 1.4188361, z: 1.4188361}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3159459313282656666}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -48.48, y: 0, z: 0}
 --- !u!1 &2347350866353419040
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,7 +61,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1.6876893, y: 0.704803, z: 0.704803}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4923655064180211356}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -96,8 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9c76899bcf20946935d7090b80defa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shellSpawnPos: {fileID: 0}
-  _shellPrefab: {fileID: 0}
-  barrel: {fileID: 0}
-  _shootingPower: 0
+  _shellSpawnPos: {fileID: 4923655064180211356}
+  _shellPrefab: {fileID: 3416849672927740880, guid: a1ba942348fe816468ecff9011defa7e,
+    type: 3}
+  barrel: {fileID: 2347350866353419040}
+  _shootingPower: 50
   _shotingSound: 

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3194543726069579117}
   - component: {fileID: 842661167481784743}
   - component: {fileID: 7188843057542192269}
+  - component: {fileID: 20503931841659929}
+  - component: {fileID: -2453958777756235930}
   m_Layer: 0
   m_Name: ancient_ballist_snaryad_3 (2)
   m_TagString: Untagged
@@ -98,3 +100,36 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2212009239438826721, guid: 0ba05405e558b14439c00870e77c8995, type: 3}
+--- !u!54 &20503931841659929
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202821389064284274}
+  serializedVersion: 2
+  m_Mass: 40
+  m_Drag: 0.01
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-2453958777756235930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202821389064284274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91854196ebef81845bc9fabd24785d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 6922443581668592523, guid: 6338027db09b0aa4f8838b9c53462f5f, type: 3}
+  _explosionPower: 20
+  _explosionRadius: 1
+  _explosionShakeWave: 3
+  _explosionSound: SmallExplosion

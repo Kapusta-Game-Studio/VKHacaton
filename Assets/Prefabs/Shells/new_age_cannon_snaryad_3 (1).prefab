@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2316846450266842916}
   - component: {fileID: 559538012767605742}
   - component: {fileID: 1656384017940864977}
+  - component: {fileID: 6236294843092490964}
+  - component: {fileID: -3746448892555301572}
   m_Layer: 0
   m_Name: new_age_cannon_snaryad_3 (1)
   m_TagString: Untagged
@@ -26,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072531776969437755}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2911662, y: 0.2911662, z: 0.2911662}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &2316846450266842916
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -98,3 +100,36 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2762472744948416827, guid: 2d088c82dacf6724e9fd916d172320a9, type: 3}
+--- !u!54 &6236294843092490964
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072531776969437755}
+  serializedVersion: 2
+  m_Mass: 40
+  m_Drag: 0.01
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-3746448892555301572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072531776969437755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91854196ebef81845bc9fabd24785d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 6236294843092490964}
+  _explosionPower: 20
+  _explosionRadius: 1
+  _explosionShakeWave: 3
+  _explosionSound: SmallExplosion
