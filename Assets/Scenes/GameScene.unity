@@ -674,7 +674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.2, z: -16.17}
+  m_LocalPosition: {x: 0, y: 6.17, z: -18.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2089,7 +2089,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _guns:
   - {fileID: 5572898548343603269, guid: 40c7858cd251e4b4f88394640996962d, type: 3}
-  - {fileID: 6113062469055653225, guid: acbf1b9b28de76d46b1d96ae18f62692, type: 3}
+  - {fileID: 8481271267712362587, guid: fa0570205f098d04fbf1dc0d7ce1da9d, type: 3}
+  - {fileID: 2273289963913514113, guid: 448799b24b8c0a44a8d337f30c069902, type: 3}
+  - {fileID: 2085939265715770627, guid: 2e78fa8cdb276f34bbd880f7ab197187, type: 3}
+  - {fileID: 1130403444661330396, guid: 0aa375eab646d8e439cfdb02cd5d6471, type: 3}
+  - {fileID: 2347350866353419040, guid: 839886e09c15d60438acc08591f670f4, type: 3}
   _gunPos: {fileID: 63029889}
   _shells:
   - sourcePrefabs:
@@ -2098,9 +2102,29 @@ MonoBehaviour:
     - {fileID: 1202821389064284274, guid: e05a52e1d74d57240ad855d321e60460, type: 3}
     types: 000000000100000000000000
   - sourcePrefabs:
-    - {fileID: 5532582058963299489, guid: 5dd09b4f85b5801468d08194daa769b1, type: 3}
-    - {fileID: 5532582058963299489, guid: e3dbc22fd8766bf438059a1435ec4327, type: 3}
-    - {fileID: 5532582058963299489, guid: 3e9aaee712f498942b73ed880052b49b, type: 3}
+    - {fileID: 8152243667682029114, guid: 820be7f3c547ef24aa7e320d976f01d5, type: 3}
+    - {fileID: 6589074098200462978, guid: c25132d9ca0f70b4781b298cb2845e41, type: 3}
+    - {fileID: 141191372113167653, guid: b97ce27eef715db41bc87b6b52e99b5e, type: 3}
+    types: 000000000100000000000000
+  - sourcePrefabs:
+    - {fileID: 1359365407379015052, guid: 7c3b1cdbfd36d594b86dc941ec286bbc, type: 3}
+    - {fileID: 1547305925441251824, guid: 40f4c5fc02e61294189632712673b184, type: 3}
+    - {fileID: 5840106886898272641, guid: 29d0995fe6a7d3b4babaee402deaa6d5, type: 3}
+    types: 000000000100000000000000
+  - sourcePrefabs:
+    - {fileID: 6881062133305505853, guid: a5cc15975ce0c7b489bcc7c6815653f2, type: 3}
+    - {fileID: 1336121322685202637, guid: dbfb2621c8122e140acc224e392c118d, type: 3}
+    - {fileID: 6354453764417245586, guid: 613b39f0ed3d2424694cc93d94d1d930, type: 3}
+    types: 000000000100000000000000
+  - sourcePrefabs:
+    - {fileID: 3416849672927740880, guid: a1ba942348fe816468ecff9011defa7e, type: 3}
+    - {fileID: 4101918530410352734, guid: eeeff10c23d6a194ab914d00ef01af66, type: 3}
+    - {fileID: 2072531776969437755, guid: c376913bd22201544973030b36ffc573, type: 3}
+    types: 000000000100000000000000
+  - sourcePrefabs:
+    - {fileID: 3416849672927740880, guid: a1ba942348fe816468ecff9011defa7e, type: 3}
+    - {fileID: 4101918530410352734, guid: eeeff10c23d6a194ab914d00ef01af66, type: 3}
+    - {fileID: 2072531776969437755, guid: c376913bd22201544973030b36ffc573, type: 3}
     types: 000000000100000000000000
   _shellPos: {fileID: 714490512}
   _GunChoosePanel: {fileID: 1257765060}
