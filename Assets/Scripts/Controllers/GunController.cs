@@ -26,10 +26,8 @@ namespace Controllers
             if (!barrel)
                 return;
 
-            Quaternion gyroRot = GyroToUnity(Input.gyro.attitude);
-            Vector3 oldRot = barrel.transform.localEulerAngles;
-            barrel.transform.localRotation = gyroRot;
-            barrel.transform.localEulerAngles = new Vector3(Mathf.Clamp(barrel.transform.localEulerAngles.y, -_maxYRot, _maxYRot), Mathf.Clamp(barrel.transform.localEulerAngles.y, -_maxXRot, _maxXRot), oldRot.z);
+            Quaternion gyroPos = GyroToUnity(Input.gyro.attitude);
+            barrel.transform.localRotation = new Quaternion(gyroPos.x, gyroPos.y, barrel.transform.localRotation.z, barrel.transform.localRotation.w);
         }
 
         public void TryToShoot()
