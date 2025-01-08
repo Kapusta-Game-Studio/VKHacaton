@@ -38,8 +38,7 @@ namespace Controllers
             {
                 Button btn = _btnsStartLevel[i];
                 btn.onClick.RemoveAllListeners();
-                string lvlName = ("LVL_" + curEraInd.ToString() + "_" + i.ToString());
-                btn.onClick.AddListener(() => SceneManager.LoadScene(lvlName));
+                btn.onClick.AddListener(() => SceneManager.LoadScene("GameScene"));
             }
         }
     }
