@@ -28,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8715972629608411210}
-  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -0.09637917, y: -1.93119, z: -0.09637916}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &4904791443235235157
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -113,9 +113,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: -8213185987888970496}
-  _shockWavePower: 20
+  _shockWavePower: 1
   _shockWaveRadius: 1
-  _shockWaveShakeWave: 3
+  _shockWaveShakeWave: 1
 --- !u!54 &-8213185987888970496
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8715972629608411210}
   serializedVersion: 2
-  m_Mass: 40
+  m_Mass: 8
   m_Drag: 0.01
   m_AngularDrag: 0.05
   m_UseGravity: 1

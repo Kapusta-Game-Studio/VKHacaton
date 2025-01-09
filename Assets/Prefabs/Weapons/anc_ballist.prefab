@@ -48,8 +48,8 @@ MonoBehaviour:
   _shellSpawnPos: {fileID: 8149822354474332087}
   _shellPrefab: {fileID: 8715972629608411210, guid: b26b790301034a847b0e16ab3f4cc802,
     type: 3}
-  barrel: {fileID: 7033151966984003165}
-  _shootingPower: 80
+  barrel: {fileID: 5572898548343603269}
+  _shootingPower: 10
   _shotingSound: 
 --- !u!1001 &7780326558897224612
 PrefabInstance:
@@ -176,12 +176,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -5631163247715247458, guid: ac7aaa00c850e4e4a8f6915f772b4f09, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ac7aaa00c850e4e4a8f6915f772b4f09, type: 3}
---- !u!1 &7033151966984003165 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 748586806163858937, guid: ac7aaa00c850e4e4a8f6915f772b4f09,
-    type: 3}
-  m_PrefabInstance: {fileID: 7780326558897224612}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7696958389378319591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 83407953272553283, guid: ac7aaa00c850e4e4a8f6915f772b4f09,
