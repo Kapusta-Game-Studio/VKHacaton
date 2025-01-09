@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxXRot: 45
   _maxYRot: 10
-  _rotAngle: 0.1
+  _rotAngle: 5
 --- !u!1 &124369382
 GameObject:
   m_ObjectHideFlags: 0
