@@ -81,6 +81,18 @@ namespace Controllers
             Destroy(_curObj);
         }
 
+        public void SwitchWeapon()
+        {
+            Transform [] oldWeapon =_gunController.transform.GetComponentsInChildren<Transform>();
+            foreach (Transform curObj in oldWeapon)
+                if (curObj.tag != "Controller")
+                    Destroy(curObj.gameObject);
+            _ShootPanel.SetActive(false);
+            _GunChoosePanel.SetActive(true);
+            ChangeGun(0);
+            _curShellPos = 0;
+        }
+
         private void CreateGun(int index) => _curObj =  Instantiate(_guns[index], _gunPos);
         private void CreateShell(int index)
         {
