@@ -50,7 +50,11 @@ namespace Audio
         {
             List<Button> buttons = new List<Button>(Resources.FindObjectsOfTypeAll<Button>());
             foreach (Button item in buttons)
+            {
+                item.onClick.RemoveAllListeners();
                 item.onClick.AddListener(() => AudioManager.Instance.PlaySound("Click"));
+            }
+                
         }
         internal AudioSource PlaySound(string name, Vector3 pos = new Vector3(), bool voluminous = false)
         {

@@ -16,6 +16,12 @@ namespace Controllers
         private float _rotationY = 0;
         private float _rotationX = 0;
 
+        public void ResetAngle()
+        {
+            _rotationY = 0;
+            _rotationX = 0;
+        }
+
         private void Start()
         {
             Input.gyro.enabled = true;
@@ -54,8 +60,6 @@ namespace Controllers
 
                 gun.transform.localEulerAngles = new Vector3(gun.transform.localEulerAngles.x, _rotationX, gun.transform.localEulerAngles.z);
             }
-
-
         }
 
         public void TryToShoot()

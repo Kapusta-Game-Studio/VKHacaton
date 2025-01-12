@@ -91,6 +91,7 @@ namespace Controllers
             _GunChoosePanel.SetActive(true);
             ChangeGun(0);
             _curShellPos = 0;
+            _gunController.ResetAngle();
         }
 
         private void CreateGun(int index) => _curObj =  Instantiate(_guns[index], _gunPos);
