@@ -32,7 +32,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -0.10755692, y: -2.1551635, z: -0.10755692}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5188790399249474914}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -128,8 +129,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91854196ebef81845bc9fabd24785d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killCamPos: {fileID: 5188790399249474914}
   _rb: {fileID: 6922443581668592523}
   _explosionPower: 2
   _explosionRadius: 1
   _explosionShakeWave: 1
   _explosionSound: SmallExplosion
+--- !u!1 &6748953875543871157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5188790399249474914}
+  m_Layer: 0
+  m_Name: KillCamPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5188790399249474914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748953875543871157}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.6496027, z: 6.5081816}
+  m_LocalScale: {x: 0.8960836, y: 0.8960834, z: 0.8960756}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993841626528887144}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

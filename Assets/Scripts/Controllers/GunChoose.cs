@@ -99,7 +99,9 @@ namespace Controllers
         {
             _curObj = Instantiate(_shells[_curGunPos].sourcePrefabs[index], _shellPos);
             _curObj.transform.rotation = new Quaternion();
-            _curObj.GetComponent<Interaction.Shell>().GetRb().isKinematic = true;
+            Interaction.Shell sh = _curObj.GetComponent<Interaction.Shell>();
+            sh.GetRb().isKinematic = true;
+            sh.enabled = false;
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Controllers
         [SerializeField] private GameObject _shootPanel;
 
         internal bool gameProcessing { get; private set; }
+        internal bool isKillCamShowing;
 
         private int _curCount;
 
@@ -26,6 +27,7 @@ namespace Controllers
             UpdateText();
             _winPanel.SetActive(false);
             gameProcessing = true;
+            isKillCamShowing = false;
             _curCount = 0;
         }
 

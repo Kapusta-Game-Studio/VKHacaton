@@ -9,6 +9,7 @@ namespace Controllers
         [SerializeField] private float _maxXRot;
         [SerializeField] private float _maxYRot;
         [SerializeField] private float _rotAngle;
+        [SerializeField] private Controllers.ProgressController _progressContrl;
 
         internal Interaction.Shooting gun;
         internal GameObject barrel;
@@ -32,33 +33,36 @@ namespace Controllers
             if (!barrel)
                 return;
 
-            if (Input.GetKey(KeyCode.W))
+            if (!_progressContrl.isKillCamShowing && _progressContrl.gameProcessing)
             {
-                _rotationY += _rotAngle * Time.deltaTime;
-                _rotationY = Mathf.Clamp(_rotationY, -_maxYRot, _maxYRot);
+                if (Input.GetKey(KeyCode.W))
+                {
+                    _rotationY += _rotAngle * Time.deltaTime;
+                    _rotationY = Mathf.Clamp(_rotationY, -_maxYRot, _maxYRot);
 
-                barrel.transform.localEulerAngles = new Vector3(_rotationY, barrel.transform.localEulerAngles.y, barrel.transform.localEulerAngles.z);
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-                _rotationY -= _rotAngle * Time.deltaTime;
-                _rotationY = Mathf.Clamp(_rotationY, -_maxYRot, _maxYRot);
+                    barrel.transform.localEulerAngles = new Vector3(_rotationY, barrel.transform.localEulerAngles.y, barrel.transform.localEulerAngles.z);
+                }
+                else if (Input.GetKey(KeyCode.S))
+                {
+                    _rotationY -= _rotAngle * Time.deltaTime;
+                    _rotationY = Mathf.Clamp(_rotationY, -_maxYRot, _maxYRot);
 
-                barrel.transform.localEulerAngles = new Vector3(_rotationY, barrel.transform.localEulerAngles.y, barrel.transform.localEulerAngles.z);
-            }
-            else if (Input.GetKey(KeyCode.A))
-            {
-                _rotationX -= _rotAngle * Time.deltaTime;
-                _rotationX = Mathf.Clamp(_rotationX, -_maxXRot, _maxXRot);
+                    barrel.transform.localEulerAngles = new Vector3(_rotationY, barrel.transform.localEulerAngles.y, barrel.transform.localEulerAngles.z);
+                }
+                else if (Input.GetKey(KeyCode.A))
+                {
+                    _rotationX -= _rotAngle * Time.deltaTime;
+                    _rotationX = Mathf.Clamp(_rotationX, -_maxXRot, _maxXRot);
 
-                gun.transform.localEulerAngles = new Vector3(gun.transform.localEulerAngles.x, _rotationX, gun.transform.localEulerAngles.z);
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                _rotationX += _rotAngle * Time.deltaTime;
-                _rotationX = Mathf.Clamp(_rotationX, -_maxXRot, _maxXRot);
+                    gun.transform.localEulerAngles = new Vector3(gun.transform.localEulerAngles.x, _rotationX, gun.transform.localEulerAngles.z);
+                }
+                else if (Input.GetKey(KeyCode.D))
+                {
+                    _rotationX += _rotAngle * Time.deltaTime;
+                    _rotationX = Mathf.Clamp(_rotationX, -_maxXRot, _maxXRot);
 
-                gun.transform.localEulerAngles = new Vector3(gun.transform.localEulerAngles.x, _rotationX, gun.transform.localEulerAngles.z);
+                    gun.transform.localEulerAngles = new Vector3(gun.transform.localEulerAngles.x, _rotationX, gun.transform.localEulerAngles.z);
+                }
             }
         }
 

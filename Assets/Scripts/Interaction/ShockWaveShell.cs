@@ -10,10 +10,9 @@ namespace Interaction
         [SerializeField] private float _shockWaveRadius = 1f;
         [SerializeField] private float _shockWaveShakeWave = 3.0f;
 
-        private void OnCollisionEnter(Collision collision)
+        protected new void OnCollisionEnter(Collision collision)
         {
-            if (collision.transform.CompareTag("Barrel"))
-                return;
+            base.OnCollisionEnter(collision);
 
             Vector3 explosionPos = transform.position;
             Collider[] colliders = Physics.OverlapSphere(explosionPos, _shockWaveRadius);

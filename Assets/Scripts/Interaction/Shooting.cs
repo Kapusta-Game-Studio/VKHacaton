@@ -24,6 +24,7 @@ namespace Interaction
             Shell sh = !shell ? Instantiate(_shellPrefab, _shellSpawnPos).GetComponent<Shell>() : shell;
             sh.transform.parent = null;
             sh.GetRb().AddForce(_shellSpawnPos.forward * _shootingPower * 20, ForceMode.Impulse);
+            sh.SetupKillCam();
         }
 
         internal void ChangeShell(GameObject shell) => _shellPrefab = shell;
