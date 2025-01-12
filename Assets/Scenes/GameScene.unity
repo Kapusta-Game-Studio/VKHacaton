@@ -3020,6 +3020,7 @@ MonoBehaviour:
   _cinematicObj: {fileID: 2018852797}
   _shootPanel: {fileID: 1224735421}
   _processController: {fileID: 1731906472}
+  _shellShowPos: {fileID: 714490512}
 --- !u!1 &1187499638
 GameObject:
   m_ObjectHideFlags: 0
