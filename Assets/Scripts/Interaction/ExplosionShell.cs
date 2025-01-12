@@ -27,7 +27,7 @@ namespace Interaction
                     if (brick)
                         brick.ChangeKinematic(false);
 
-                    rb.AddExplosionForce(_explosionPower * 1000, explosionPos, _explosionRadius, _explosionShakeWave);
+                    rb.AddExplosionForce(_explosionPower *  1000, explosionPos, _explosionRadius, _explosionShakeWave);
                 }
             }
             Audio.AudioManager.Instance.PlaySound(_explosionSound, this.transform.position, voluminous: true);

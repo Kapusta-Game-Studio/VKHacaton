@@ -21,7 +21,7 @@ namespace Interaction
     {
         [SerializeField] protected Rigidbody _rb;
 
-        private void Awake()
+        protected void Awake()
         {
             if (!_rb)
                 try
@@ -38,6 +38,7 @@ namespace Interaction
         {
             return _rb;
         }
+
     }
 }
 

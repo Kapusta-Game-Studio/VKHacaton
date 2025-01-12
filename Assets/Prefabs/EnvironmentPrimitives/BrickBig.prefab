@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 7127052308268973296}
   - component: {fileID: 7127052308268973297}
   - component: {fileID: 2672168523869815909}
+  - component: {fileID: 3453294747679195809}
   m_Layer: 0
-  m_Name: Brick
+  m_Name: BrickBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7127052308268973302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,11 +107,24 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7127052308268973302}
   serializedVersion: 2
-  m_Mass: 40.032
+  m_Mass: 100
   m_Drag: 1
   m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
+--- !u!114 &3453294747679195809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7127052308268973302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f223c842a7f2f204696565b455a4dd89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shouldBeKinematicAtStart: 1

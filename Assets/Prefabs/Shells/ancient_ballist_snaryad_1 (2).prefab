@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4904791443235235157}
   - component: {fileID: 7202846373857300895}
   - component: {fileID: 1526134316991965108}
-  - component: {fileID: -5256979602620810613}
   - component: {fileID: -8213185987888970496}
+  - component: {fileID: -8117184081368447620}
   m_Layer: 0
   m_Name: ancient_ballist_snaryad_1 (2)
   m_TagString: Untagged
@@ -100,22 +100,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 8f9670b0f7b7a564bacad91729c9a9b0, type: 3}
---- !u!114 &-5256979602620810613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8715972629608411210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 765c89995dcf7be428015879430da3b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rb: {fileID: -8213185987888970496}
-  _shockWavePower: 1
-  _shockWaveRadius: 1
-  _shockWaveShakeWave: 1
 --- !u!54 &-8213185987888970496
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -131,4 +115,17 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
+--- !u!114 &-8117184081368447620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8715972629608411210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01dd19dacd86bfd409f92fe5e001da88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: -8213185987888970496}
