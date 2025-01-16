@@ -26,7 +26,11 @@ namespace Cinematic
             MoveCamera();
         }
 
-        public void FocusCam(Transform obj) => _cam.LookAt(obj);
+        public void FixCam(Vector3 pos, Quaternion rot)
+        {
+            _cam.position = pos;
+            _cam.rotation = rot;
+        }
         
         public void KillCamShow(Transform pos, Transform shell)
         {

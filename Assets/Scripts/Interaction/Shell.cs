@@ -21,7 +21,6 @@ namespace Interaction
     {
         private const float CAM_SEPARATION_DISTANCE = 0.5f;
 
-
         public Transform killCamPos;
         [SerializeField] protected Rigidbody _rb;
 
@@ -30,6 +29,8 @@ namespace Interaction
         private Cinematic.CameraController _camContrl;
         private bool _isCamFocused;
 
+        private Vector3 _prevCamPos;
+        private Quaternion _prevCamRot;
         internal Rigidbody GetRb()
         {
             return _rb;
@@ -69,35 +70,30 @@ namespace Interaction
             wasFirstTouch = false;
         }
 
-        protected void Update()
+        protected void LateUpdate()
         {
             if (!_isCamFocused || wasFirstTouch)
                 return;
 
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, _rb.velocity, out hit, CAM_SEPARATION_DISTANCE))
-            {
-                if (!hit.transform.CompareTag("Barrel"))
-                    SeparateCamera();
-            }
+            _prevCamPos = killCamPos.position;
+            _prevCamRot = killCamPos.rotation;
         }
 
         protected void SeparateCamera()
         {
             wasFirstTouch = true;
+            
+            _camContrl.KillCamRemoval();
+            _camContrl.FixCam(_prevCamPos, _prevCamRot);
+            _isCamFocused = false;
 
-            if (_isCamFocused)
-            {
-                _camContrl.KillCamRemoval();
-                _isCamFocused = false;
-            }
         }
 
         protected void OnCollisionEnter(Collision collision)
         {
             if (collision.transform.CompareTag("Barrel") || wasFirstTouch || !_isCamFocused)
                 return;
-            _camContrl.FocusCam(transform);
+
             SeparateCamera();
         }
     }

@@ -171,6 +171,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: middle-new_age_cannon(big)
       objectReference: {fileID: 0}
+    - target: {fileID: 7925534199297466368, guid: cfd0d573eb9b3ac4eab7eb188c2b5367,
+        type: 3}
+      propertyPath: m_TagString
+      value: Barrel
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7000723507456726333, guid: cfd0d573eb9b3ac4eab7eb188c2b5367, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cfd0d573eb9b3ac4eab7eb188c2b5367, type: 3}
