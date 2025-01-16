@@ -26,6 +26,8 @@ namespace Cinematic
             MoveCamera();
         }
 
+        public void FocusCam(Transform obj) => _cam.LookAt(obj);
+        
         public void KillCamShow(Transform pos, Transform shell)
         {
             _processController.isKillCamShowing = true;

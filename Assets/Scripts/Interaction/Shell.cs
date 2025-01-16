@@ -19,6 +19,9 @@ namespace Interaction
 
     public class Shell : MonoBehaviour
     {
+        private const float CAM_SEPARATION_DISTANCE = 0.5f;
+
+
         public Transform killCamPos;
         [SerializeField] protected Rigidbody _rb;
 
@@ -66,11 +69,21 @@ namespace Interaction
             wasFirstTouch = false;
         }
 
-        protected void OnCollisionEnter(Collision collision)
+        protected void Update()
         {
-            if (collision.transform.CompareTag("Barrel"))
+            if (!_isCamFocused || wasFirstTouch)
                 return;
 
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, _rb.velocity, out hit, CAM_SEPARATION_DISTANCE))
+            {
+                if (!hit.transform.CompareTag("Barrel"))
+                    SeparateCamera();
+            }
+        }
+
+        protected void SeparateCamera()
+        {
             wasFirstTouch = true;
 
             if (_isCamFocused)
@@ -78,6 +91,14 @@ namespace Interaction
                 _camContrl.KillCamRemoval();
                 _isCamFocused = false;
             }
+        }
+
+        protected void OnCollisionEnter(Collision collision)
+        {
+            if (collision.transform.CompareTag("Barrel") || wasFirstTouch || !_isCamFocused)
+                return;
+            _camContrl.FocusCam(transform);
+            SeparateCamera();
         }
     }
 }
