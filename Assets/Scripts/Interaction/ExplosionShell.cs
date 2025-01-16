@@ -11,8 +11,10 @@ namespace Interaction
         [SerializeField] private float _explosionShakeWave = 3.0f;
         [SerializeField] private string _explosionSound = "SmallExplosion";
 
-        private void OnCollisionEnter(Collision collision)
+        private new void OnCollisionEnter(Collision collision)
         {
+            base.OnCollisionEnter(collision);
+
             if (collision.transform.CompareTag("Barrel"))
                 return;
 

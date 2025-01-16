@@ -22,6 +22,8 @@ namespace Interaction
         public Transform killCamPos;
         [SerializeField] protected Rigidbody _rb;
 
+        internal bool wasFirstTouch;
+
         private Cinematic.CameraController _camContrl;
         private bool _isCamFocused;
 
@@ -61,6 +63,7 @@ namespace Interaction
 
             _camContrl = GameObject.FindObjectOfType<Cinematic.CameraController>();
             _isCamFocused = false;
+            wasFirstTouch = false;
         }
 
         protected void OnCollisionEnter(Collision collision)
@@ -68,16 +71,13 @@ namespace Interaction
             if (collision.transform.CompareTag("Barrel"))
                 return;
 
+            wasFirstTouch = true;
+
             if (_isCamFocused)
             {
                 _camContrl.KillCamRemoval();
                 _isCamFocused = false;
             }
-        }
-        protected void OnDestroy()
-        {
-            if (_isCamFocused)
-                _camContrl.KillCamRemoval();
         }
     }
 }

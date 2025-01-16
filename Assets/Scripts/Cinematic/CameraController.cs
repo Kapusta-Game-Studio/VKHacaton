@@ -22,7 +22,7 @@ namespace Cinematic
 
         public void ChangeView()
         {
-            _curCam = _curCam + 1 < _camPositions.Count ? _curCam+1 : 0;
+            _curCam = _curCam + 1 < _camPositions.Count ? _curCam + 1 : 0;
             MoveCamera();
         }
 
@@ -38,7 +38,8 @@ namespace Cinematic
         }
         public void KillCamRemoval()
         {
-            _cam.transform.parent = null;
+            _cam.SetParent(null, true);
+
             StartCoroutine(WaitAndReturnCam());
         }
         private void MoveCamera()
