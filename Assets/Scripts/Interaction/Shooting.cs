@@ -15,12 +15,12 @@ namespace Interaction
         [Header("Shooting options")]
 
         [SerializeField] private float _shootingPower;
-        [SerializeField] private string _shotingSound;
+        [SerializeField] private List<string> _shotingSound;
 
         internal void Shoot(Shell shell = null)
         {
-            if (_shotingSound != string.Empty)
-                Audio.AudioManager.Instance.PlaySound(_shotingSound, this.transform.position, voluminous: true);
+            if (_shotingSound.Count > 0)
+                Audio.AudioManager.Instance.PlaySound(_shotingSound[Random.Range(0, _shotingSound.Count)], this.transform.position, voluminous: true);
             Shell sh = !shell ? Instantiate(_shellPrefab, _shellSpawnPos).GetComponent<Shell>() : shell;
             sh.transform.parent = null;
             sh.GetRb().AddForce(_shellSpawnPos.forward * _shootingPower * 20, ForceMode.Impulse);

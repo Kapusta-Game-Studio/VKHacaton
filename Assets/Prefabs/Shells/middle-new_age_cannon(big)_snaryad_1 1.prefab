@@ -117,6 +117,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killCamPos: {fileID: 6007634117889719419}
   _rb: {fileID: -5481825064081912151}
+  _hitSounds:
+  - StoneHit1
+  - StoneHit2
+  - StoneHit3
 --- !u!64 &2290721225045521560
 MeshCollider:
   m_ObjectHideFlags: 0

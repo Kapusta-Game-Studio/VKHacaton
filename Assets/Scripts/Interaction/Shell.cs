@@ -23,6 +23,7 @@ namespace Interaction
 
         public Transform killCamPos;
         [SerializeField] protected Rigidbody _rb;
+        [SerializeField] private List<string> _hitSounds;
 
         internal bool wasFirstTouch;
 
@@ -93,6 +94,9 @@ namespace Interaction
         {
             if (collision.transform.CompareTag("Barrel") || wasFirstTouch || !_isCamFocused)
                 return;
+
+            if (_hitSounds.Count > 0)
+                Audio.AudioManager.Instance.PlaySound(_hitSounds[Random.Range(0, _hitSounds.Count)], transform.position, true, _rb.velocity.magnitude/4);
 
             SeparateCamera();
         }

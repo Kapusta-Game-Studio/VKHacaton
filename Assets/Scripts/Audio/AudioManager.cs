@@ -56,7 +56,7 @@ namespace Audio
             }
                 
         }
-        internal AudioSource PlaySound(string name, Vector3 pos = new Vector3(), bool voluminous = false)
+        internal AudioSource PlaySound(string name, Vector3 pos = new Vector3(), bool voluminous = false, float volume = 1f)
         {
             if (!effects.ContainsKey(name))
             {
@@ -76,6 +76,7 @@ namespace Audio
             audio.outputAudioMixerGroup = effects_mix;
             if (voluminous) 
                 audio.spatialBlend = 0.7f;
+            audio.volume = volume;
             audio.Play();
 
             Destroy(obj, audio.clip.length);
@@ -86,7 +87,7 @@ namespace Audio
         {
             GameObject o = this.gameObject;
             AudioSource audioSource = o != null && o.GetComponent<AudioSource>() ?
-                gameObject.GetComponent<AudioSource>() : gameObject.AddComponent<AudioSource>();// TODO: Добавление компонента на объект - это очень медленная операция
+                gameObject.GetComponent<AudioSource>() : gameObject.AddComponent<AudioSource>();
 
             if (audioSource.clip != musics[name])
             {
