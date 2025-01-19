@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killCamPos: {fileID: 5188790399249474914}
   _rb: {fileID: 6922443581668592523}
+  _hitSounds: []
   _explosionPower: 2
   _explosionRadius: 1
   _explosionShakeWave: 1

@@ -162,3 +162,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killCamPos: {fileID: 3009779825778360955}
   _rb: {fileID: -8213185987888970496}
+  _hitSounds: []

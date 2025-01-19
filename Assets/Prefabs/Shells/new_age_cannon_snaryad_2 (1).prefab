@@ -32,7 +32,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2696804, y: 0.2696804, z: 0.2696804}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1560784803022206684}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -93,7 +94,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4101918530410352734}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5c05b8fd3bcb5ab42bf4578138da2aaf, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -128,8 +129,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91854196ebef81845bc9fabd24785d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killCamPos: {fileID: 1560784803022206684}
   _rb: {fileID: 8911029581167432485}
-  _explosionPower: 200
-  _explosionRadius: 15
-  _explosionShakeWave: 3
+  _hitSounds: []
+  _explosionPower: 50
+  _explosionRadius: 8
+  _explosionShakeWave: 5
   _explosionSound: SmallExplosion
+--- !u!1 &8058041012766476643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1560784803022206684}
+  m_Layer: 0
+  m_Name: KillCamPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1560784803022206684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8058041012766476643}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -5.1917496, z: -2.591027}
+  m_LocalScale: {x: -0.357386, y: -0.35738587, z: -7.16103}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3721980481756187364}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -985,4 +985,4 @@ MonoBehaviour:
     type: 3}
   barrel: {fileID: 4975387958431166167}
   _shootingPower: 20
-  _shotingSound: 
+  _shotingSound: []
