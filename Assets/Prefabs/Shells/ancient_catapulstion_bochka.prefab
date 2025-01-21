@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4784621531503788356
+--- !u!1 &7773813320913302723
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2326934575895672875}
+  - component: {fileID: 228225224347154106}
   m_Layer: 0
   m_Name: KillCamPos
   m_TagString: Untagged
@@ -16,21 +16,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2326934575895672875
+--- !u!4 &228225224347154106
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4784621531503788356}
-  m_LocalRotation: {x: -0.5530428, y: -0, z: -0, w: 0.83315283}
-  m_LocalPosition: {x: 0, y: -3.6043153, z: -2.9067173}
-  m_LocalScale: {x: -0.31749988, y: -0.33359167, z: -8.735314}
+  m_GameObject: {fileID: 7773813320913302723}
+  m_LocalRotation: {x: 0.092101045, y: -0, z: -0, w: 0.9957497}
+  m_LocalPosition: {x: 0, y: 1.16682, z: -3.5741966}
+  m_LocalScale: {x: -0.31749988, y: -0.45960253, z: -6.431048}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8820659138920789120}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 22.848, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 100.569, y: 0, z: 0}
 --- !u!1 &8152243667682029114
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ Transform:
   m_LocalScale: {x: 0.30355915, y: 0.20643544, z: 0.30355915}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2326934575895672875}
+  - {fileID: 228225224347154106}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91854196ebef81845bc9fabd24785d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killCamPos: {fileID: 2326934575895672875}
+  killCamPos: {fileID: 228225224347154106}
   _rb: {fileID: -5053063019756250746}
   _hitSounds: []
   _explosionPower: 2
