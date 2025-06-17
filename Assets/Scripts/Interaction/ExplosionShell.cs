@@ -15,9 +15,6 @@ namespace Interaction
         {
             base.OnCollisionEnter(collision);
 
-            if (collision.transform.CompareTag("Barrel"))
-                return;
-
             Vector3 explosionPos = transform.position;
             Collider[] colliders = Physics.OverlapSphere(explosionPos, _explosionRadius);
             foreach (Collider hit in colliders)

@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7202846373857300895}
   - component: {fileID: 1526134316991965108}
   - component: {fileID: -8213185987888970496}
-  - component: {fileID: -8117184081368447620}
+  - component: {fileID: -2716538241544867133}
   m_Layer: 0
   m_Name: ancient_ballist_snaryad_1 (2)
   m_TagString: Untagged
@@ -148,7 +148,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &-8117184081368447620
+--- !u!114 &-2716538241544867133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8715972629608411210}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01dd19dacd86bfd409f92fe5e001da88, type: 3}
+  m_Script: {fileID: 11500000, guid: 18ad2e74553e0a8458eac9ac70b82e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   killCamPos: {fileID: 3009779825778360955}
