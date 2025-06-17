@@ -103,12 +103,6 @@ namespace Interaction
             if (_hitSounds.Count > 0)
                 Audio.AudioManager.Instance.PlaySound(_hitSounds[Random.Range(0, _hitSounds.Count)], transform.position, true, _rb.velocity.magnitude/4);
 
-            MeshDeformation deform = null;
-            collision.gameObject.TryGetComponent<MeshDeformation>(out deform);
-            deform?.AddDeformation(collision.GetContact((int)(collision.contactCount/2)).point,
-                0.1f,
-                _rb.velocity.magnitude);
-
             SeparateCamera();
         }
     }

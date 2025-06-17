@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 306527657997949404}
   - component: {fileID: 4880795934550565192}
   - component: {fileID: -594960344232950129}
-  - component: {fileID: 897908635015176182}
   m_Layer: 0
   m_Name: BrickMedium
   m_TagString: Untagged
@@ -129,15 +128,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldBeKinematicAtStart: 1
---- !u!114 &897908635015176182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306527657997949403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d42f6de316a37754ca3b156cdfe2329c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

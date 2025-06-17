@@ -133,8 +133,8 @@ MonoBehaviour:
   _rb: {fileID: 6236294843092490964}
   _hitSounds: []
   _explosionPower: 40
-  _explosionRadius: 10
-  _explosionShakeWave: 5
+  _explosionRadius: 1
+  _explosionShakeWave: 1
   _explosionSound: SmallExplosion
 --- !u!1 &6252322228564136819
 GameObject:
